@@ -330,3 +330,16 @@ Beta Bytez – Task 4
 MERN Stack Blog Application
 
 ---
+# How to run Setup
+
+# Backend:
+
+cd server
+npm install
+npm run dev
+
+# Frontend:
+
+cd client
+npm install
+npm run dev
