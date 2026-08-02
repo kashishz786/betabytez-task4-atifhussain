@@ -1,18 +1,332 @@
-# React + Vite
+# Beta Bytez Task 4 – Full Stack MERN Blog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project is developed as part of **Beta Bytez Task 4**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The goal of this project is to build a complete **MERN (MongoDB, Express.js, React.js, Node.js)** Blog Application by connecting a React frontend with a Node.js/Express backend and storing data in MongoDB Atlas.
 
-## React Compiler
+The application allows users to:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Register a new account
+- Login securely
+- Create blog posts
+- Edit their own posts
+- Delete their own posts
+- View all blog posts
+- Add comments to posts
+- Store authentication using JWT
+- Protect private routes
+- Store all data in MongoDB Atlas
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+# 🛠 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Frontend
+
+- React.js
+- React Router DOM
+- Axios
+- CSS
+
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- bcryptjs
+- dotenv
+- cors
+
+---
+
+# Features
+
+## User Authentication
+
+- User Registration
+- User Login
+- Password Encryption
+- JWT Authentication
+
+---
+
+## Blog Management
+
+- Create Blog Post
+- Read Blog Posts
+- Update Own Posts
+- Delete Own Posts
+
+---
+
+## Comments
+
+- Add Comments
+- View Comments
+- Store Comments in MongoDB
+
+---
+
+## Security
+
+- JWT Protected Routes
+- Password Hashing using bcryptjs
+- Environment Variables
+
+---
+
+## Database
+
+- MongoDB Atlas Cloud Database
+- Mongoose Models
+- Data Validation
+
+---
+
+# Installation Guide
+
+## Step 1
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/betabytez-task4-kashif.git
+```
+
+---
+
+## Step 2
+
+Open the project
+
+```bash
+cd betabytez-task4-kashif
+```
+
+---
+
+# Backend Setup
+
+Open terminal
+
+```bash
+cd server
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env` file
+
+Example
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+```
+
+Start backend
+
+```bash
+npm run dev
+```
+
+Backend runs on
+
+```
+http://localhost:5000
+```
+
+---
+
+# Frontend Setup
+
+Open another terminal
+
+```bash
+cd client
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start React application
+
+```bash
+npm run dev
+```
+
+Frontend runs on
+
+```
+http://localhost:5173
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file inside the **server** folder.
+
+```
+PORT=5000
+
+MONGO_URI=your_connection_string
+
+JWT_SECRET=your_secret_key
+```
+
+---
+
+# API Endpoints
+
+## Authentication
+
+### Register
+
+```
+POST /api/auth/register
+```
+
+### Login
+
+```
+POST /api/auth/login
+```
+
+---
+
+## Posts
+
+### Get All Posts
+
+```
+GET /api/posts
+```
+
+### Create Post
+
+```
+POST /api/posts
+```
+
+### Update Post
+
+```
+PUT /api/posts/:id
+```
+
+### Delete Post
+
+```
+DELETE /api/posts/:id
+```
+
+---
+
+## Comments
+
+### Add Comment
+
+```
+POST /api/comments
+```
+
+### Get Comments
+
+```
+GET /api/comments/:postId
+```
+
+---
+
+# Authentication
+
+The application uses **JWT (JSON Web Token)** for authentication.
+
+After successful login:
+
+- JWT token is generated.
+- Token is stored in Local Storage.
+- Token is sent with protected API requests.
+
+---
+
+# 🗄 Database
+
+The project uses:
+
+- MongoDB Atlas
+- Mongoose ODM
+
+Collections:
+
+- Users
+- Posts
+- Comments
+
+---
+
+# Validation
+
+The application includes validation for:
+
+### User
+
+- Name Required
+- Email Required
+- Unique Email
+- Password Minimum Length
+
+### Post
+
+- Title Required
+- Content Required
+- Category Required
+
+### Comment
+
+- Comment Required
+
+---
+
+# Learning Objectives
+
+This project demonstrates:
+
+- MERN Stack Development
+- REST API Development
+- MongoDB Integration
+- Mongoose Models
+- Authentication using JWT
+- Password Hashing
+- React Routing
+- Axios API Integration
+- CRUD Operations
+- Environment Variables
+- Cloud Database Integration
+
+---
+
+# Author
+
+**Atif Hussain**
+
+Beta Bytez – Task 4
+
+MERN Stack Blog Application
+
+---
